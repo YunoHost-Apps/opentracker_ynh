@@ -103,7 +103,7 @@ ynh_print_info "Installing OpenTracker..."
 
 ynh_app_setting_set $app final_path $final_path
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source "$final_path" "front"
+ynh_setup_source "$final_path"
 
 #=================================================
 # SETUP SYSTEMD
@@ -156,7 +156,7 @@ ynh_system_user_create $app
 ### that really need such authorization.
 
 # Set permissions to app files
-chown -R $app:$app $final_path
+chown -R admin:1007 $final_path
 
 
 #=================================================

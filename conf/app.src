@@ -1,7 +1,7 @@
-SOURCE_URL=https://github.com/jellyfin/jellyfin/releases/download/v10.2.2/jellyfin_10.2.2-1_debian-amd64.deb
-SOURCE_SUM=7a4cc63fd8dfd5535717eae931151dead66293b37246110330dfc1174dac72f3abde75477efed4983c0d2c51331c0efa6ef5b544a2579db6cdd21e80b114eb5c
+SOURCE_URL=https://github.com/YunoHost-Apps/opentracker_ynh/releases/download/1.0/opentracker.tar.gz
+SOURCE_SUM=89bf73a92eea622a9fa12aa7d91c125bbe69dd3c8cdb70560830be120a22c57bb0e46ec80366a7d7c952400b56d39d346a8ce6a404d30117999280fd3d74071b
 SOURCE_SUM_PRG=sha512sum
-SOURCE_FORMAT=deb
-SOURCE_IN_SUBDIR=false
-SOURCE_EXTRACT=false
-SOURCE_FILENAME=jellyfin.deb
+SOURCE_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=true
+SOURCE_EXTRACT=true
+SOURCE_FILENAME=opentracker.tar.gz
