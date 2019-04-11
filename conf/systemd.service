@@ -1,0 +1,16 @@
+[Unit]
+Description=opentracker
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/opentracker
+User=admin
+Group=users
+Type=simple
+UMask=000
+ExecStart=/opt/opentracker/opentracker &
+RestartSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

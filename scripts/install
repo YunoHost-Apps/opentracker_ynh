@@ -47,7 +47,7 @@ app=$YNH_APP_INSTANCE_NAME
 
 ### If the app uses nginx as web server (written in HTML/PHP in most cases), the final path should be "/var/www/$app".
 ### If the app provides an internal web server (or uses another application server such as uwsgi), the final path should be "/opt/yunohost/$app"
-final_path=/opt/yunohost/$app
+final_path=/opt/$app
 test ! -e "$final_path" || ynh_die "This path already contains a folder"
 
 # Normalize the url path syntax
@@ -79,11 +79,6 @@ ynh_print_info "Installing dependencies..."
 ###		- As well as the section "REINSTALL DEPENDENCIES" in the restore script
 ###		- And the section "UPGRADE DEPENDENCIES" in the upgrade script
 
-wget -O - https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | apt-key add -
-echo "deb [arch=amd64] https://repo.jellyfin.org/debian $( lsb_release -c -s ) main" >> /etc/apt/sources.list.d/jellyfin.list
-
-ynh_package_update
-
 ynh_install_app_dependencies jellyfin
 
 #=================================================
@@ -96,10 +91,26 @@ ynh_install_app_dependencies jellyfin
 ###		- Remove the section "CLOSE A PORT" in the remove script
 
 # Find a free port
-port=$(ynh_find_port 8096)
+port=$(ynh_find_port 6969)
 # Open this port
-yunohost firewall allow --no-upnp TCP $port 2>&1
+yunohost firewall allow --no-upnp UDP $port 2>&1
 ynh_app_setting_set $app port $port
+
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_print_info "Installing OpenTracker..."
+
+ynh_app_setting_set $app final_path $final_path
+# Download, check integrity, uncompress and patch the source from app.src
+ynh_setup_source "$final_path" "front"
+
+#=================================================
+# SETUP SYSTEMD
+#=================================================
+
+ynh_add_systemd_config
+systemctl enable $app.service
 
 #=================================================
 # NGINX CONFIGURATION
@@ -145,7 +156,7 @@ ynh_system_user_create $app
 ### that really need such authorization.
 
 # Set permissions to app files
-#chown -R root: /etc/loolwsd
+chown -R $app:$app $final_path
 
 
 #=================================================
