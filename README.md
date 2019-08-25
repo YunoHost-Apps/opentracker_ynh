@@ -17,6 +17,8 @@ OpenTracker Server
  App can be installed by YunoHost **admin web-interface** or by **running following command**:
 
         $ sudo yunohost app install https://github.com/YunoHost-Apps/opentracker_ynh
+        
+        udp://mydomain.com:6969
 
  
 ### Upgrade this package:
