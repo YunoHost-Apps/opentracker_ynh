@@ -3,12 +3,12 @@ Description=opentracker
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/opentracker
 User=admin
 Group=users
 Type=simple
 UMask=000
-ExecStart=/opt/opentracker/opentracker &
+WorkingDirectory=__FINALPATH__
+ExecStart=__FINALPATH__/opentracker &
 RestartSec=15
 Restart=always
 
