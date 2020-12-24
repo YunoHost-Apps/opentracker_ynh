@@ -72,7 +72,7 @@ ynh_install_app_dependencies $pkg_dependencies
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_print_info "Installing OpenTracker..." --weight=5
+ynh_script_progression --message="Installing OpenTracker..." --weight=5
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 
@@ -115,6 +115,13 @@ ynh_add_systemd_config
 # Set permissions to app files
 chown -R admin:1007 $final_path
 chmod +x $final_path/opentracker
+
+#=================================================
+# INTEGRATE SERVICE IN YUNOHOST
+#=================================================
+ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
+
+yunohost service add $app --description "A short description of the app" --log "/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
