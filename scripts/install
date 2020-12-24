@@ -14,8 +14,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 ynh_clean_setup () {
-	### Remove this function if there's nothing to clean before calling the remove script.
-	true
+	ynh_clean_check_starting
 }
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
@@ -34,7 +33,7 @@ app=$YNH_APP_INSTANCE_NAME
 #=================================================
 # CHECK IF THE APP CAN BE INSTALLED WITH THESE ARGS
 #=================================================
-ynh_script_progression --message="Validating installation parameters..." --time --weight=1
+ynh_script_progression --message="Validating installation parameters..." --weight=1
 
 final_path=/opt/$app
 test ! -e "$final_path" || ynh_die "This path already contains a folder"
@@ -45,7 +44,7 @@ ynh_webpath_register --app=$app --domain=$domain --path_url=$path_url
 #=================================================
 # STORE SETTINGS FROM MANIFEST
 #=================================================
-ynh_script_progression --message="Storing installation settings..." --time --weight=1
+ynh_script_progression --message="Storing installation settings..." --weight=1
 
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 ynh_app_setting_set --app=$app --key=path --value=$path_url
@@ -54,7 +53,7 @@ ynh_app_setting_set --app=$app --key=is_public --value=$is_public
 #=================================================
 # FIND AND OPEN A PORT
 #=================================================
-ynh_script_progression --message="Configuring firewall..." --time --weight=1
+ynh_script_progression --message="Configuring firewall..." --weight=1
 
 # Find a free port
 port=$(ynh_find_port --port=6969)
@@ -66,14 +65,14 @@ ynh_exec_warn_less yunohost firewall allow Both $port
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Installing dependencies..." --time --weight=1
+ynh_script_progression --message="Installing dependencies..." --weight=2
 
 ynh_install_app_dependencies $pkg_dependencies
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_print_info "Installing OpenTracker..."
+ynh_print_info "Installing OpenTracker..." --weight=5
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 
@@ -86,7 +85,7 @@ pushd "$final_path" || ynh_die
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring NGINX web server..." --time --weight=1
+ynh_script_progression --message="Configuring NGINX web server..." --weight=10
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
@@ -94,7 +93,7 @@ ynh_add_nginx_config
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
-ynh_script_progression --message="Configuring system user..." --time --weight=1
+ynh_script_progression --message="Configuring system user..." --weight=1
 
 # Create a system user
 ynh_system_user_create --username=$app
@@ -102,7 +101,7 @@ ynh_system_user_create --username=$app
 #=================================================
 # SETUP SYSTEMD
 #=================================================
-ynh_script_progression --message="Configuring a systemd service..." --time --weight=1
+ynh_script_progression --message="Configuring a systemd service..." --weight=2
 
 # Create a dedicated systemd config
 ynh_add_systemd_config
