@@ -21,7 +21,6 @@ path_url=$(ynh_app_setting_get --app=$app --key=path)
 is_public=$(ynh_app_setting_get --app=$app --key=is_public)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 
-
 #=================================================
 # CHECK VERSION
 #=================================================
@@ -71,7 +70,11 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path"
+	git clone git://erdgeist.org/opentracker "$final_path" --quiet
+
+	pushd "$final_path" || ynh_die
+		ynh_exec_warn_less make
+	 popd || ynh_die
 fi
 
 #=================================================
