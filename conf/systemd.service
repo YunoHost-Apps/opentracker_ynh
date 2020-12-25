@@ -1,10 +1,10 @@
 [Unit]
-Description=opentracker
+Description=OpenTracker
 After=network.target
 
 [Service]
-User=admin
-Group=users
+User=__APP__
+Group=__APP__
 Type=simple
 UMask=000
 WorkingDirectory=__FINALPATH__

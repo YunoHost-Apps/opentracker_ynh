@@ -35,7 +35,7 @@ app=$YNH_APP_INSTANCE_NAME
 #=================================================
 ynh_script_progression --message="Validating installation parameters..." --weight=1
 
-final_path=/home/admin/$app
+final_path=/opt/$app
 test ! -e "$final_path" || ynh_die "This path already contains a folder"
 
 # Register (book) web path
@@ -113,7 +113,7 @@ ynh_add_systemd_config
 #=================================================
 
 # Set permissions to app files
-chown -R admin:1007 $final_path
+chown -R $app: $final_path
 chmod +x $final_path/opentracker
 
 #=================================================
