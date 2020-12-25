@@ -75,7 +75,7 @@ chown -R root: $final_path
 #=================================================
 # REINSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Reinstalling dependencies..." --time --weight=2
+ynh_script_progression --message="Reinstalling dependencies..." --weight=2
 
 # Define and install dependencies
 ynh_install_app_dependencies $pkg_dependencies
