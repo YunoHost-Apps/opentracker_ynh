@@ -55,10 +55,11 @@ ynh_systemd_action --service_name=$app --action=stop --log_path="/var/log/$app/$
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
-
+	ynh_secure_remove --file="$final_path"
 	# Download, check integrity, uncompress and patch the source from app.src
-	git fetch git://erdgeist.org/opentracker "$final_path" --quiet
-
+	git clone git://erdgeist.org/opentracker "$final_path" --quiet
+	cp ../conf/Makefile $final_path/Makefile
+	cp ../conf/opentracker.conf.sample $final_path/opentracker.conf
 	pushd $final_path
 		ynh_exec_warn_less make
 	 popd
