@@ -24,7 +24,7 @@ ynh_abort_if_errors
 #=================================================
 
 # Retrieve arguments
-domain=$YNH_APP_ARG_DOMAIN
+#domain=$YNH_APP_ARG_DOMAIN
 app=$YNH_APP_INSTANCE_NAME
 
 #=================================================
@@ -40,7 +40,7 @@ test ! -e "$final_path" || ynh_die "This path already contains a folder"
 #=================================================
 ynh_script_progression --message="Storing installation settings..." --weight=1
 
-ynh_app_setting_set --app=$app --key=domain --value=$domain
+#ynh_app_setting_set --app=$app --key=domain --value=$domain
 
 #=================================================
 # FIND AND OPEN A PORT
@@ -69,9 +69,9 @@ ynh_script_progression --message="Installing OpenTracker..." --weight=5
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 git clone git://erdgeist.org/opentracker "$final_path" --quiet
 
-pushd "$final_path" || ynh_die
+pushd $final_path
 	ynh_exec_warn_less make
- popd || ynh_die
+ popd
 
 #=================================================
 # CREATE DEDICATED USER
