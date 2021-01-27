@@ -68,7 +68,8 @@ ynh_script_progression --message="Installing OpenTracker..." --weight=5
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 git clone git://erdgeist.org/opentracker "$final_path" --quiet
-
+cp ../conf/Makefile $final_path/Makefile
+cp ../conf/opentracker.conf.sample $final_path/opentracker.conf
 pushd $final_path
 	ynh_exec_warn_less make
  popd
