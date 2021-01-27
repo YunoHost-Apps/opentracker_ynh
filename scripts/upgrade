@@ -16,7 +16,6 @@ ynh_script_progression --message="Loading installation settings..." --weight=1
 
 app=$YNH_APP_INSTANCE_NAME
 
-#domain=$(ynh_app_setting_get --app=$app --key=domain)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 
 #=================================================
@@ -57,7 +56,7 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	git clone git://erdgeist.org/opentracker "$final_path" --quiet
+	git fetch git://erdgeist.org/opentracker "$final_path" --quiet
 
 	pushd $final_path
 		ynh_exec_warn_less make
