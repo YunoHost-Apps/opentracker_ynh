@@ -34,8 +34,8 @@ visit `http://serverIP:6969/stats` to view the tracker stats.
 
 #### Support multi-utilisateur
 
-* L'authentification LDAP et HTTP est-elle prise en charge ?
-* L'application peut-elle être utilisée par plusieurs utilisateurs ?
+* L'authentification LDAP et HTTP est-elle prise en charge ?  **Non**
+* L'application peut-elle être utilisée par plusieurs utilisateurs ?  **Non**
 
 #### Architectures supportées
 

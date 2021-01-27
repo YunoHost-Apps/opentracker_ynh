@@ -23,7 +23,7 @@ OpenTracker is a open and free bittorrent tracker project. It aims for minimal r
 
 by default the tracker will run on 6969 port on both UDP and TCP.
 
-visit `https://serverIP:6969/stats` to view the tracker stats.
+visit `http://serverIP:6969/stats` to view the tracker stats.
 
 ## Documentation
 
@@ -34,8 +34,8 @@ visit `https://serverIP:6969/stats` to view the tracker stats.
 
 #### Multi-user support
 
- * Are LDAP and HTTP auth supported?
- * Can the app be used by multiple users?
+ * Are LDAP and HTTP auth supported? **NO**
+ * Can the app be used by multiple users? **NO**
 
 #### Supported architectures
 
