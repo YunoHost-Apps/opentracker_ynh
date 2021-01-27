@@ -9,7 +9,7 @@
 Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour apprendre comment l'installer.*
 
 ## Vue d'ensemble
-OpenTracker is a open and free bittorrent tracker project. It aims for minimal resource usage and is intended to run at your wlan router. Currently it is deployed as an open and free tracker instance. Read our free and open tracker blog and announce your torrents there (but do not hesitate to setup your own free trackers!).
+OpenTracker est un projet de tracker bittorrent ouvert et gratuit. Il vise une utilisation minimale des ressources.
 
 **Version incluse :** 1.0
 

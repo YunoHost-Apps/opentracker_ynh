@@ -9,7 +9,7 @@
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Overview
-OpenTracker is a open and free bittorrent tracker project. It aims for minimal resource usage and is intended to run at your wlan router. Currently it is deployed as an open and free tracker instance. Read our free and open tracker blog and announce your torrents there (but do not hesitate to setup your own free trackers!).
+OpenTracker is a open and free bittorrent tracker project. It aims for minimal resource usage.
 
 **Shipped version:** 1.0
 
@@ -23,7 +23,7 @@ OpenTracker is a open and free bittorrent tracker project. It aims for minimal r
 
 by default the tracker will run on 6969 port on both UDP and TCP.
 
-visit `http://serverIP:6969/stats` to view the tracker stats.
+visit `https://serverIP:6969/stats` to view the tracker stats.
 
 ## Documentation
 
