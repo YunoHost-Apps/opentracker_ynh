@@ -19,7 +19,7 @@ OpenTracker est un projet de tracker bittorrent ouvert et gratuit. Il vise une u
 
 ## Configuration
 
-`udp://mydomain.com:6969`
+`udp://serverIP:6969`
 
 by default the tracker will run on 6969 port on both UDP and TCP.
 
