@@ -3,10 +3,10 @@
     "id": "opentracker",
     "packaging_format": 1,
     "description": {
-        "en": "OpenTracker package for YunoHost.",
-        "fr": "OpenTracker pour YunoHost."
+        "en": "Bittorrent tracker",
+        "fr": "Tracker Bittorrent"
     },
-    "version": "2019",
+    "version": "1.0~ynh1",
     "url": "http://erdgeist.org/arts/software/opentracker/",
     "license": "Beerware",
     "maintainer": {
@@ -14,45 +14,14 @@
         "email": "liberodark@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 2.7.2"
+        "yunohost": ">= 4.0.1"
     },
     "multi_instance": false,
     "services": [
-        "nginx",
-        "php5-fpm",
-        "mysql"
+        "nginx"
     ],
     "arguments": {
-        "install": [{
-                "name": "domain",
-                "type": "domain",
-                "ask": {
-                    "en": "Choose a domain name for OpenTracker",
-                    "fr": "Choisissez un nom de domaine pour OpenTracker"
-                },
-                "example": "example.com"
-            },
-
-            {
-                "name": "path",
-                "type": "path",
-                "ask": {
-                    "en": "Choose a path for OpenTracker /opt is accepted",
-                    "fr": "Choisissez un chemin pour OpenTracker /opt est accepté"
-                },
-                "example": "/opt",
-                "default": "/opt"
-            },
-            
-            {
-                "name": "is_public",
-                "type": "boolean",
-                "ask": {
-                    "en": "Is it a public site ?",
-                    "fr": "Est-ce un site public ?"
-                },
-                "default": "true"
-            }
+        "install": [
         ]
     }
 }

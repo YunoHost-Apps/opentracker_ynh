@@ -1,14 +1,14 @@
 [Unit]
-Description=opentracker
+Description=OpenTracker: Bittorrent tracker
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/opentracker
-User=admin
-Group=users
+User=__APP__
+Group=__APP__
 Type=simple
 UMask=000
-ExecStart=/opt/opentracker/opentracker &
+WorkingDirectory=__FINALPATH__
+ExecStart=__FINALPATH__/opentracker &
 RestartSec=15
 Restart=always
 
