@@ -13,10 +13,6 @@ OpenTracker is a open and free bittorrent tracker project. It aims for minimal r
 
 **Shipped version:** 1.0
 
-## Screenshots
-
-![](Link to a screenshot of this app.)
-
 ## Configuration
 
 `udp://serverIP:6969`
