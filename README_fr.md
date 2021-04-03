@@ -35,8 +35,8 @@ visit `http://serverIP:6969/stats` to view the tracker stats.
 
 #### Architectures supportées
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/opentracker%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/opentracker%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/opentracker/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/opentracker.svg)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/opentracker.svg)](https://ci-apps-arm.yunohost.org/ci/apps/opentracker/)
 
 ## Limitations
 
