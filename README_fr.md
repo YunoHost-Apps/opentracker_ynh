@@ -1,67 +1,38 @@
 # OpenTracker pour YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)  
+[![Niveau d'intégration](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)  
 [![Installer OpenTracker avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
 
-*[Read this readme in english.](./README.md)* 
+*[Read this readme in english.](./README.md)*
+*[Lire ce readme en français.](./README_fr.md)*
 
-> *Ce package vous permet d'installer OpenTracker rapidement et simplement sur un serveur YunoHost.  
-Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour apprendre comment l'installer.*
+> *Ce package vous permet d'installer OpenTracker rapidement et simplement sur un serveur YunoHost.
+Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
 
 ## Vue d'ensemble
-OpenTracker est un projet de tracker bittorrent ouvert et gratuit. Il vise une utilisation minimale des ressources.
 
-**Version incluse :** 1.0
+Tracker Bittorrent
 
-## Configuration
+**Version incluse :** 1.0~ynh1
 
-`udp://serverIP:6969`
+**Démo :** https://dispatch.khlieng.com/connect
 
-by default the tracker will run on 6969 port on both UDP and TCP.
+## Documentations et ressources
 
-visit `http://serverIP:6969/stats` to view the tracker stats.
-
-## Documentation
-
- * Documentation officielle : http://erdgeist.org/arts/software/opentracker/index/#overview
- * Documentation YunoHost : Si une documentation spécifique est nécessaire, n'hésitez pas à contribuer.
-
-## Caractéristiques spécifiques YunoHost
-
-#### Support multi-utilisateur
-
-* L'authentification LDAP et HTTP est-elle prise en charge ?  **Non**
-* L'application peut-elle être utilisée par plusieurs utilisateurs ?  **Non**
-
-#### Architectures supportées
-
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/opentracker.svg)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/opentracker.svg)](https://ci-apps-arm.yunohost.org/ci/apps/opentracker/)
-
-## Limitations
-
-* Limitations connues.
-
-## Informations additionnelles
-
-* Autres informations que vous souhaitez ajouter sur cette application.
-
-## Liens
-
- * Signaler un bug : https://github.com/YunoHost-Apps/opentracker_ynh/issues
- * Site de l'application : http://erdgeist.org/arts/software/opentracker/
- * Dépôt de l'application principale : http://erdgeist.org/gitweb/opentracker/
- * Site web YunoHost : https://yunohost.org/
-
----
+* Site officiel de l'app : http://erdgeist.org/arts/software/opentracker/
+* Documentation officielle de l'admin : http://erdgeist.org/arts/software/opentracker/
+* Documentation YunoHost pour cette app : https://yunohost.org/app_opentracker
+* Signaler un bug : https://github.com/YunoHost-Apps/opentracker_ynh/issues
 
 ## Informations pour les développeurs
 
-Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing).
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing).
 
-To try the testing branch, please proceed like that.
+Pour essayer la branche testing, procédez comme suit.
 ```
 sudo yunohost app install https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing --debug
-or
+ou
 sudo yunohost app upgrade opentracker -u https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing --debug
 ```
+
+**Plus d'infos sur le packaging d'applications :** https://yunohost.org/packaging_apps
