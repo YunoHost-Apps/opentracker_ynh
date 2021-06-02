@@ -8,13 +8,19 @@
     },
     "version": "1.0~ynh1",
     "url": "http://erdgeist.org/arts/software/opentracker/",
+    "upstream": {
+        "license": "Beerware",
+        "website": "http://erdgeist.org/arts/software/opentracker/",
+        "demo": "https://dispatch.khlieng.com/connect",
+        "admindoc": "http://erdgeist.org/arts/software/opentracker/"
+    },
     "license": "Beerware",
     "maintainer": {
         "name": "liberodark",
         "email": "liberodark@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 4.1.7"
+        "yunohost": ">= 4.2.4"
     },
     "multi_instance": false,
     "services": [
