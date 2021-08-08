@@ -17,6 +17,16 @@ Tracker Bittorrent
 
 **Démo :** https://dispatch.khlieng.com/connect
 
+## Avertissements / informations importantes
+
+## Configuration
+
+`udp://serverIP:6969`
+
+par défaut, le tracker s'exécutera sur le port 6969 à la fois sur UDP et TCP.
+
+visitez `http://serverIP:6969/stats` pour afficher les statistiques du tracker. 
+
 ## Documentations et ressources
 
 * Site officiel de l'app : http://erdgeist.org/arts/software/opentracker/
