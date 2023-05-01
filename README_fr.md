@@ -16,7 +16,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-Tracker Bittorrent
+Bittorrent tracker
 
 **Version incluse :** 1.0~ynh3
 
