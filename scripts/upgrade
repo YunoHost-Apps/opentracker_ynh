@@ -12,12 +12,12 @@ source /usr/share/yunohost/helpers
 #=================================================
 # LOAD SETTINGS
 #=================================================
-ynh_script_progression --message="Loading installation settings..." --weight=1
+#REMOVEME? ynh_script_progression --message="Loading installation settings..." --weight=1
 
-app=$YNH_APP_INSTANCE_NAME
+#REMOVEME? app=$YNH_APP_INSTANCE_NAME
 
-final_path=$(ynh_app_setting_get --app=$app --key=final_path)
-port=$(ynh_app_setting_get --app=$app --key=port)
+#REMOVEME? #REMOVEME? install_dir=$(ynh_app_setting_get --app=$app --key=install_dir)
+#REMOVEME? port=$(ynh_app_setting_get --app=$app --key=port)
 
 #=================================================
 # CHECK VERSION
@@ -28,16 +28,16 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 # BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
 #=================================================
-ynh_script_progression --message="Backing up the app before upgrading (may take a while)..." --weight=1
+#REMOVEME? ynh_script_progression --message="Backing up the app before upgrading (may take a while)..." --weight=1
 
 # Backup the current version of the app
-ynh_backup_before_upgrade
-ynh_clean_setup () {
+#REMOVEME? ynh_backup_before_upgrade
+#REMOVEME? ynh_clean_setup () {
 	# Restore it if the upgrade fails
-	ynh_restore_upgradebackup
+#REMOVEME? 	ynh_restore_upgradebackup
 }
 # Exit if an error occurs during the execution of the script
-ynh_abort_if_errors
+#REMOVEME? ynh_abort_if_errors
 
 #=================================================
 # STANDARD UPGRADE STEPS
@@ -51,10 +51,10 @@ ynh_systemd_action --service_name=$app --action=stop --log_path="/var/log/$app/$
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
-ynh_script_progression --message="Making sure dedicated system user exists..." --weight=5
+#REMOVEME? ynh_script_progression --message="Making sure dedicated system user exists..." --weight=5
 
 # Create a dedicated user (if not existing)
-ynh_system_user_create --username=$app --home_dir="$final_path"
+#REMOVEME? ynh_system_user_create --username=$app --home_dir="$install_dir"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -63,12 +63,12 @@ ynh_system_user_create --username=$app --home_dir="$final_path"
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
-	ynh_secure_remove --file="$final_path"
+#REMOVEME? 	ynh_secure_remove --file="$install_dir"
 	# Download, check integrity, uncompress and patch the source from app.src
-	git clone git://erdgeist.org/opentracker "$final_path" --quiet
-	cp ../conf/Makefile $final_path/Makefile
-	cp ../conf/opentracker.conf.sample $final_path/opentracker.conf
-	pushd $final_path
+	git clone git://erdgeist.org/opentracker "$install_dir" --quiet
+	cp ../conf/Makefile $install_dir/Makefile
+	cp ../conf/opentracker.conf.sample $install_dir/opentracker.conf
+	pushd $install_dir
 		ynh_exec_warn_less make
 	 popd
 fi
@@ -76,9 +76,9 @@ fi
 #=================================================
 # UPGRADE DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Upgrading dependencies..." --weight=2
+#REMOVEME? ynh_script_progression --message="Upgrading dependencies..." --weight=2
 
-ynh_install_app_dependencies $pkg_dependencies
+#REMOVEME? ynh_install_app_dependencies $pkg_dependencies
 
 #=================================================
 # SETUP SYSTEMD
@@ -95,8 +95,8 @@ ynh_add_systemd_config
 #=================================================
 
 # Set permissions on app files
-chown -R $app: $final_path
-chmod +x $final_path/$app
+chown -R $app: $install_dir
+chmod +x $install_dir/$app
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST

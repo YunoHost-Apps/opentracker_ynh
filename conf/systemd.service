@@ -7,8 +7,8 @@ User=__APP__
 Group=__APP__
 Type=simple
 UMask=000
-WorkingDirectory=__FINALPATH__
-ExecStart=__FINALPATH__/opentracker &
+WorkingDirectory=__INSTALL_DIR__
+ExecStart=__INSTALL_DIR__/opentracker &
 RestartSec=15
 Restart=always
 
