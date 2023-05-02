@@ -5,35 +5,26 @@ It shall NOT be edited by hand.
 
 # OpenTracker pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)
+
 [![Installer OpenTracker avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer OpenTracker rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer OpenTracker rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
-Tracker Bittorrent
+Bittorrent tracker
 
 **Version incluse :** 1.0~ynh3
 
 **Démo :** https://dispatch.khlieng.com/connect
-## Avertissements / informations importantes
-
-## Configuration
-
-`udp://serverIP:6969`
-
-par défaut, le tracker s'exécutera sur le port 6969 à la fois sur UDP et TCP.
-
-visitez `http://serverIP:6969/stats` pour afficher les statistiques du tracker. 
-
 ## Documentations et ressources
 
-* Site officiel de l'app : <http://erdgeist.org/arts/software/opentracker/>
-* Documentation officielle de l'admin : <http://erdgeist.org/arts/software/opentracker/>
+* Site officiel de l’app : <http://erdgeist.org/arts/software/opentracker/>
+* Documentation officielle de l’admin : <http://erdgeist.org/arts/software/opentracker/>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_opentracker>
 * Signaler un bug : <https://github.com/YunoHost-Apps/opentracker_ynh/issues>
 
@@ -49,4 +40,4 @@ ou
 sudo yunohost app upgrade opentracker -u https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>

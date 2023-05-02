@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # OpenTracker for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![Working status](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![Working status](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)
+
 [![Install OpenTracker with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -20,16 +21,6 @@ Bittorrent tracker
 **Shipped version:** 1.0~ynh3
 
 **Demo:** https://dispatch.khlieng.com/connect
-## Disclaimers / important information
-
-## Configuration
-
-`udp://serverIP:6969`
-
-by default the tracker will run on 6969 port on both UDP and TCP.
-
-visit `http://serverIP:6969/stats` to view the tracker stats.
-
 ## Documentation and resources
 
 * Official app website: <http://erdgeist.org/arts/software/opentracker/>
