@@ -18,7 +18,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 Bittorrent tracker
 
-**Version incluse :** 1.0~ynh3
+**Version incluse :** 1.0~ynh4
 
 **Démo :** https://dispatch.khlieng.com/connect
 ## Documentations et ressources
