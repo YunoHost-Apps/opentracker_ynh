@@ -4,9 +4,6 @@
 # COMMON VARIABLES
 #=================================================
 
-# dependencies used by the app
-pkg_dependencies="libowfat-dev zlib1g-dev make build-essential"
-
 #=================================================
 # PERSONAL HELPERS
 #=================================================

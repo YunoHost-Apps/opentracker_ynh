@@ -1,0 +1,44 @@
+packaging_format = 2
+
+id = "opentracker"
+name = "OpenTracker"
+description.en = "Bittorrent tracker"
+description.fr = "Tracker Bittorrent"
+
+version = "1.0~ynh4"
+
+maintainers = ["liberodark"]
+
+[upstream]
+license = "Beerware"
+website = "http://erdgeist.org/arts/software/opentracker/"
+demo = "https://dispatch.khlieng.com/connect"
+admindoc = "http://erdgeist.org/arts/software/opentracker/"
+
+[integration]
+yunohost = ">= 11.1.20"
+architectures = "all"
+multi_instance = false
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+
+[resources]
+
+    [resources.ports]
+
+    main.default = 6969
+    main.exposed = "Both"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+
+    [resources.apt]
+    packages = "libowfat-dev zlib1g-dev make build-essential"
