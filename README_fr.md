@@ -25,7 +25,7 @@ Bittorrent tracker
 
 * Site officiel de l’app : <http://erdgeist.org/arts/software/opentracker/>
 * Documentation officielle de l’admin : <http://erdgeist.org/arts/software/opentracker/>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_opentracker>
+* YunoHost Store: <https://apps.yunohost.org/app/opentracker>
 * Signaler un bug : <https://github.com/YunoHost-Apps/opentracker_ynh/issues>
 
 ## Informations pour les développeurs
