@@ -7,7 +7,7 @@ description.fr = "Tracker Bittorrent"
 
 version = "1.0~ynh4"
 
-maintainers = ["liberodark"]
+maintainers = []
 
 [upstream]
 license = "Beerware"
@@ -16,7 +16,7 @@ demo = "https://dispatch.khlieng.com/connect"
 admindoc = "http://erdgeist.org/arts/software/opentracker/"
 
 [integration]
-yunohost = ">= 11.1.20"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = false
 ldap = false
