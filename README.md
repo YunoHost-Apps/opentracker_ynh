@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # OpenTracker for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![Working status](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/opentracker)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
+![Working status](https://apps.yunohost.org/badge/state/opentracker)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/opentracker)
 
 [![Install OpenTracker with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
 
