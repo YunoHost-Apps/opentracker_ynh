@@ -15,8 +15,6 @@ ynh_setup_source --dest_dir="$install_dir"
 #=================================================
 ynh_script_progression "Adding $app's configuration files..."
 
-#ynh_config_add --template="Makefile" --destination="$install_dir/Makefile"
-
 ynh_config_add --template="opentracker.conf.sample" --destination="$install_dir/opentracker.conf"
 
 #=================================================
