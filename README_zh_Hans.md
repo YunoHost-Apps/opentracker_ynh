@@ -5,7 +5,9 @@
 
 # YunoHost 上的 OpenTracker
 
-[![集成程度](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![工作状态](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/opentracker)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
+![工作状态](https://apps.yunohost.org/badge/state/opentracker)
+![维护状态](https://apps.yunohost.org/badge/maintained/opentracker)
 
 [![使用 YunoHost 安装 OpenTracker](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
 
