@@ -6,41 +6,48 @@ source /usr/share/yunohost/helpers
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression "Installing OpenTracker..."
+ynh_script_progression "Setting up source files..."
 
-git clone git://erdgeist.org/opentracker "$install_dir" --quiet
+ynh_setup_source --dest_dir="$install_dir"
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
 
 ynh_config_add --template="Makefile" --destination="$install_dir/Makefile"
+
 ynh_config_add --template="opentracker.conf.sample" --destination="$install_dir/opentracker.conf"
+
+#=================================================
+# APP INSTALL
+#=================================================
+ynh_script_progression "installing $app..."
 
 pushd $install_dir
 	ynh_hide_warnings make
 popd
 
-# Set permissions to app files
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app: $install_dir
 chmod +x $install_dir/$app
 
 #=================================================
-# SETUP SYSTEMD
+# SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression "Configuring $app's systemd service..."
+ynh_script_progression "Adding system configurations related to $app..."
 
-# Create a dedicated systemd config
 ynh_config_add_systemd
-
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression "Integrating service in YunoHost..."
 
 yunohost service add $app --description="Bittorrent tracker" --log="systemd" --needs_exposed_ports="$port"
 
-# Start a systemd service
+#=================================================
+# START SYSTEMD SERVICE
+#=================================================
+ynh_script_progression "Starting $app's systemd service..."
+
 ynh_systemctl --service=$app --action=start --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression "Installation of OpenTracker completed"
+ynh_script_progression "Installation of $app completed"

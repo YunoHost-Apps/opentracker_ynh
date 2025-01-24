@@ -5,7 +5,7 @@ name = "OpenTracker"
 description.en = "Bittorrent tracker"
 description.fr = "Tracker Bittorrent"
 
-version = "1.0~ynh4"
+version = "1.0~ynh5"
 
 maintainers = []
 
@@ -32,8 +32,13 @@ ram.runtime = "50M"
 
 [resources]
 
-    [resources.ports]
+    [resources.sources]
 
+    [resources.sources.main]
+    url = "https://erdgeist.org/arts/software/opentracker/opentracker-1.0.tar.bz2"
+    sha256 = "8109cbf271d4374020af719aca5448b1354517c0b2f4b74b167332944a61eb31"
+
+    [resources.ports]
     main.default = 6969
     main.exposed = "Both"
 
@@ -44,4 +49,4 @@ ram.runtime = "50M"
     [resources.permissions]
 
     [resources.apt]
-    packages = "libowfat-dev zlib1g-dev make build-essential"
+    packages = "libowfat-dev, zlib1g-dev, make, build-essential"
