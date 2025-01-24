@@ -15,6 +15,7 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Installing OpenTracker..." --weight=5
 
 git clone git://erdgeist.org/opentracker "$install_dir" --quiet
+
 cp ../conf/Makefile $install_dir/Makefile
 cp ../conf/opentracker.conf.sample $install_dir/opentracker.conf
 pushd $install_dir
