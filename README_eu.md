@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # OpenTracker YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/opentracker)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/opentracker)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/opentracker)
 
 [![Instalatu OpenTracker YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
 
@@ -16,9 +18,10 @@ EZ editatu eskuz.
 
 ## Aurreikuspena
 
-Bittorrent tracker
+opentracker is an open and free bittorrent tracker project. It aims for minimal resource usage and is intended to run at your wlan router. Currently it is deployed as an open and free tracker instance.
 
-**Paketatutako bertsioa:** 1.0~ynh4
+
+**Paketatutako bertsioa:** 1.0~ynh5
 
 **Demoa:** <https://dispatch.khlieng.com/connect>
 ## Dokumentazioa eta baliabideak

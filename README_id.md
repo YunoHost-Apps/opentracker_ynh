@@ -1,0 +1,46 @@
+<!--
+N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Ini TIDAK boleh diedit dengan tangan.
+-->
+
+# OpenTracker untuk YunoHost
+
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/opentracker)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
+![Status kerja](https://apps.yunohost.org/badge/state/opentracker)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/opentracker)
+
+[![Pasang OpenTracker dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
+
+*[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
+
+> *Paket ini memperbolehkan Anda untuk memasang OpenTracker secara cepat dan mudah pada server YunoHost.*  
+> *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
+
+## Ringkasan
+
+opentracker is an open and free bittorrent tracker project. It aims for minimal resource usage and is intended to run at your wlan router. Currently it is deployed as an open and free tracker instance.
+
+
+**Versi terkirim:** 1.0~ynh5
+
+**Demo:** <https://dispatch.khlieng.com/connect>
+## Dokumentasi dan sumber daya
+
+- Website aplikasi resmi: <http://erdgeist.org/arts/software/opentracker/>
+- Dokumentasi admin resmi: <http://erdgeist.org/arts/software/opentracker/>
+- Gudang YunoHost: <https://apps.yunohost.org/app/opentracker>
+- Laporkan bug: <https://github.com/YunoHost-Apps/opentracker_ynh/issues>
+
+## Info developer
+
+Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing).
+
+Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
+
+```bash
+sudo yunohost app install https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing --debug
+atau
+sudo yunohost app upgrade opentracker -u https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing --debug
+```
+
+**Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>
