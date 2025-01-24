@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # OpenTracker para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/opentracker.svg)](https://dash.yunohost.org/appci/app/opentracker) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/opentracker.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/opentracker.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/opentracker)](https://ci-apps.yunohost.org/ci/apps/opentracker/)
+![Estado funcional](https://apps.yunohost.org/badge/state/opentracker)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/opentracker)
 
 [![Instalar OpenTracker con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=opentracker)
 
@@ -30,7 +32,7 @@ Bittorrent tracker
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/opentracker_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
