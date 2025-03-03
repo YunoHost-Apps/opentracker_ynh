@@ -8,7 +8,7 @@ Group=__APP__
 Type=simple
 UMask=000
 WorkingDirectory=__INSTALL_DIR__
-ExecStart=__INSTALL_DIR__/opentracker &
+ExecStart=__INSTALL_DIR__/opentracker -p 6969 -f __INSTALL_DIR__/opentracker.conf
 RestartSec=15
 Restart=always
 

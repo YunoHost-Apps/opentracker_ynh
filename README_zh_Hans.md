@@ -18,9 +18,10 @@
 
 ## 概况
 
-Bittorrent tracker
+opentracker is an open and free bittorrent tracker project. It aims for minimal resource usage and is intended to run at your wlan router. Currently it is deployed as an open and free tracker instance.
 
-**分发版本：** 1.0~ynh4
+
+**分发版本：** 1.0~ynh5
 
 **演示：** <https://dispatch.khlieng.com/connect>
 ## 文档与资源
